@@ -1,6 +1,6 @@
 local status, packer = pcall(require, 'packer')
 if (not status) then
-  print("Packer is not installed")
+  print('Packer is not installed')
   return
 end
 
@@ -37,5 +37,4 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'L3MON4D3/LuaSnip' -- Snippet
-  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 end)
