@@ -1,19 +1,16 @@
-require('base')
-require('highlights')
-require('maps')
-require('plugins')
-
-local has = function(x)
-  return vim.fn.has(x) == 1
-end
-
-local is_mac = has 'macunix'
-local is_win = has 'win32'
-
-if is_mac then
-  require('macos')
-end
-
-if is_win then
-  require('windows')
-end
+require("razwanizmi.plugins-setup")
+require("razwanizmi.core.options")
+require("razwanizmi.core.keymaps")
+require("razwanizmi.core.colorscheme")
+require("razwanizmi.plugins.comment")
+require("razwanizmi.plugins.nvim-tree")
+require("razwanizmi.plugins.lualine")
+require("razwanizmi.plugins.telescope")
+require("razwanizmi.plugins.nvim-cmp")
+require("razwanizmi.plugins.lsp.mason")
+require("razwanizmi.plugins.lsp.lspsaga")
+require("razwanizmi.plugins.lsp.lspconfig")
+require("razwanizmi.plugins.lsp.null-ls")
+require("razwanizmi.plugins.autopairs")
+require("razwanizmi.plugins.treesitter")
+require("razwanizmi.plugins.gitsigns")
