@@ -19,6 +19,7 @@ null_ls.setup({
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
+		formatting.rubocop, -- ruby formatter
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js
 			condition = function(utils)
@@ -40,6 +41,7 @@ null_ls.setup({
 							return client.name == "null-ls"
 						end,
 						bufnr = bufnr,
+						timeout_ms = 2000,
 					})
 				end,
 			})

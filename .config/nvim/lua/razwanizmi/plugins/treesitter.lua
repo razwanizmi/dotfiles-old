@@ -25,6 +25,7 @@ treesitter.setup({
 		"lua",
 		"markdown",
 		"markdown_inline",
+		"ruby",
 		"tsx",
 		"typescript",
 		"vim",
